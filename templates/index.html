@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Product Price Tracker</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Price Tracker</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Product Name</th>
+                <th>Product Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.url }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.cost }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
